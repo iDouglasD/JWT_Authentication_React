@@ -5,15 +5,14 @@ import Routes from "./routes";
 import history from "./history";
 
 import { AuthProvider } from "./Context/AuthContext";
-import { Context } from "../Context/AuthContext";
 
 function App() {
     return (
-        <Context.Provider>
+        <AuthProvider>
             <Router history={history}>
                 <Routes />
             </Router>
-        </Context.Provider>
+        </AuthProvider>
     );
 }
 
